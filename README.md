@@ -1,3 +1,3 @@
 # nlw-2
 
-### next-level-week --> season #2
+### next-level-week [DISCOVERY] --> season #2
