@@ -2,8 +2,8 @@
 
 next-level-week **[DISCOVERY]** --> *season #2*
 
-Proffy - Sua plataforma de estudos online
-Totalmente responsivo
+<p> Proffy - Sua plataforma de estudos online </p>
+<p> Totalmente responsivo </p>
 
 - [x] 03/08
 - [ ] 04/08 _-- in progress --_
