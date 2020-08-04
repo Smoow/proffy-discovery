@@ -1,0 +1,19 @@
+:root {
+    font-size: 40%; /* modificação da medida rem */
+}
+
+#page-landing {
+    background-color: var(--color-primary);
+}
+
+#page-landing #container {
+    color: var(--color-text-in-primary);
+}
+
+.logo-container img {
+    height: 10rem;
+}
+
+.hero-image {
+    width: 100%;
+}
