@@ -7,8 +7,9 @@ function cloneField() {
     const fields = newFieldContainer.querySelectorAll('input')
 
     //console.log(fields[0].value)
-    fields[0].value = ''
-    fields[1].value = ''
+    fields.forEach(function(field) {
+        field.value = ""
+    })
 
     document.querySelector('#schedule-items').appendChild(newFieldContainer)
 }
