@@ -1,9 +1,7 @@
-# Proffy -- nlw#2
+## Proffy
 
-next-level-week **[DISCOVERY]** --> *season #2*
-
-<p> Proffy - Sua plataforma de estudos online </p>
-<p> Totalmente responsivo </p>
+#### Projeto desenvolvido durante a Next-Level-Week #2 
+#### _Proffy - Sua plataforma de estudos online_
 
 - [x] 03/08
 - [ ] 04/08 _-- in progress --_
