@@ -7,6 +7,10 @@ server.use(express.static("public"))
     return response.sendFile(__dirname + "/views/index.html")
 })
 .get("/study", (request, response) => {
-    return response.send("Study Listening")
+    return response.sendFile(__dirname + "/views/study.html")
 })
+.get("/give-classes", (request, response) => {
+    return response.sendFile(__dirname + "/views/give-classes.html")
+})
+
 .listen(5000)
