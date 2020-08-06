@@ -13,9 +13,10 @@ You can use the default options from the installer.
 #### 3. Download and Install SQLite: https://www.sqlite.org/
 MySQL can handle as well
 
+-----------
+
 - [x] 03/08/20
 - [x] 04/08/20
 - [x] 05/08/20
 - [ ] 06/08/20 _-- in progress --_
------------
 - [ ] 07/08/20
