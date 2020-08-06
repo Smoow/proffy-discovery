@@ -36,11 +36,9 @@
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
 
                             {%for subject in subjects %}
-
                                 <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }}>
                                     {{subject}}
                                 </option>
-
                             {%endfor%}
 
                         </select>
@@ -49,13 +47,13 @@
                         <label for="weekday">Dia da semana</label>
                         <select name="weekday" id="weekday">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
-                            {%for weekday in weekdays %}
 
+                            {%for weekday in weekdays %}
                                 <option value="{{loop.index}}" {{ "selected" if filters.weekday == loop.index }}>
                                     {{weekday}}
                                 </option>
-
                             {%endfor%}
+                            
                         </select>
                     </div>
                     <div class="input-block" >

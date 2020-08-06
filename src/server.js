@@ -1,4 +1,4 @@
-// Dados
+// data
 const proffys = [
     { 
         name: "Pedro Henrique Carreto", avatar: "https://avatars2.githubusercontent.com/u/37567719?s=460&u=1ee201e40649e05078a90f9366ecdfb04f89fc48&v=4", 
@@ -47,6 +47,12 @@ const weekdays = [
 
 
 // Functions
+
+function getSubject(subjectNumber) {
+    const arrayPosition = +subjectNumber - 1
+    return subjects[arrayPosition]
+}
+
 function pageLanding(request, response) {
     return response.render("index.html")
 }
@@ -57,7 +63,18 @@ function pageStudy(request, response) {
 }
 
 function pageGiveClasses(request, response) {
-    return response.render("give-classes.html")
+    const data = request.query
+    const isEmpty = Object.keys(data).length == 0
+
+    if (!isEmpty) {
+
+        data.subject = getSubject(data.subject)
+
+        proffys.push(data)
+        return response.redirect("/study")
+    }
+    // Adicionar data à lista de proffys
+    return response.render("give-classes.html", { subjects, weekdays })
 }
 
 // Server
