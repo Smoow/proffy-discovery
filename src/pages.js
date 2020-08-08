@@ -36,6 +36,10 @@ async function pageStudy(request, response) {
         const db = await Database
         const proffys = await db.all(query)
 
+        proffys.map((proffy) => {
+            proffy.subject = getSubject(proffy.subject)
+        })
+
         return response.render('study.html', { proffys, subjects, filters, weekdays })
 
     } catch (error) {
@@ -46,22 +50,51 @@ async function pageStudy(request, response) {
 }
 
 function pageGiveClasses(request, response) {
-    const data = request.query
-    const isEmpty = Object.keys(data).length == 0
-
-    if (!isEmpty) {
-
-        data.subject = getSubject(data.subject)
-
-        proffys.push(data)
-        return response.redirect("/study")
-    }
-    // Adicionar data à lista de proffys
     return response.render("give-classes.html", { subjects, weekdays })
+}
+
+async function saveClasses(request, response) {
+    const createProffy = require('./database/createProffy')
+
+    const proffyValue = {
+        name: request.body.name,
+        avatar: request.body.avatar,
+        whatsapp: request.body.whatsapp,
+        bio: request.body.bio
+    }
+
+    const classValue = { 
+        subject: request.body.subject,
+        cost: request.body.cost
+    }
+
+    const classScheduleValues = request.body.weekday.map((weekday, index) => {
+        return {
+            weekday, 
+            time_from: convertHoursToMinutes(request.body.time_from[index]),
+            time_to: convertHoursToMinutes(request.body.time_to[index])
+        }
+    })
+
+    try {
+        const db = await Database
+        await createProffy(db, { proffyValue, classValue, classScheduleValues })
+        
+        let queryString = "?subject=" + request.body.subject
+        queryString += "&weekday=" + request.body.weekday[0]
+        queryString += "&time=" + request.body.time_from[0]
+
+        return response.redirect("/study" + queryString)
+    } catch (error) {
+        console.log(error)
+    }
+
+    
 }
 
 module.exports = {
     pageLanding,
     pageStudy,
-    pageGiveClasses
+    pageGiveClasses,
+    saveClasses
 }
