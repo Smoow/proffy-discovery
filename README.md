@@ -1,22 +1,38 @@
-## Proffy
+## 📖 Sobre
 
-#### Projeto desenvolvido durante a Next-Level-Week #2 
-#### _Proffy - Plataforma de estudos online_
+##### Este é um projeto desenvolvido durante a Next Level Week, realizada pela @Rocketseat durante os dias 3 a 9 de Agosto de 2020.
 
-## ENVIRONMENT SETUP
+##### A proposta do projeto é uma aplicação que possa ligar quem deseja aprender, com quer ensinar. É possível encontrar alunos para o que você leciona, ou encontrar o professor para aquela matéria que você sempre quis aprender mais! Sem que haja nenhuma limitação de área!!
 
-#### 1. Download and Install Git: https://git-scm.com/
-You can use the default options from the installer.
+## 🚀 Tecnologias utilizadas
 
-#### 2. Download and Install NodeJS: https://nodejs.org/en/
- 
-#### 3. Download and Install SQLite: https://www.sqlite.org/
-MySQL can handle as well
+##### O projeto está desenvolvido utilizando as seguintes tecnologias:
 
------------
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Nunjucks
+- SQLite
 
-- [x] 03/08/20
-- [x] 04/08/20
-- [x] 05/08/20
-- [x] 06/08/20 
-- [ ] 07/08/20 _-- in progress --_
+## Como executar o projeto
+
+```
+# Clonar o repositório
+git clone https://github.com/smoow/proffy-discovery
+
+# Entrar no diretório
+cd proffy-discovery
+
+# Baixar as dependências
+npm i
+
+# Executar o servidor
+npm run dev
+```
+
+##### Feito isso, abra o seu navegador e acesse http://localhost:5500/
+
+--------------------
+
+Desenvolvido com 💜 por Smoow
