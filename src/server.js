@@ -1,12 +1,11 @@
 // Server
-const express = require('express')
-const server = express()
+const express = require('express');
+const server = express();
 
 const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')
 
 // Nunjucks configuration -- Template Engine
 const nunjucks = require('nunjucks')
-
 nunjucks.configure('src/views', {
     express: server,
     noCache: true,
@@ -25,4 +24,4 @@ server
 
 
 // Start server
-.listen(5000)
+.listen(5000);

@@ -35,11 +35,11 @@
                         <select name="subject" id="subject">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
 
-                            {%for subject in subjects %}
+                            {% for subject in subjects %}
                                 <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }}>
                                     {{subject}}
                                 </option>
-                            {%endfor%}
+                            {% endfor %}
 
                         </select>
                     </div>
@@ -48,17 +48,17 @@
                         <select name="weekday" id="weekday">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
 
-                            {%for weekday in weekdays %}
-                                <option value="{{loop.index}}" {{ "selected" if filters.weekday == loop.index }}>
+                            {% for weekday in weekdays %}
+                                <option value="{{ loop.index0 }}" {{ "selected" if filters.weekday == loop.index }}>
                                     {{weekday}}
                                 </option>
-                            {%endfor%}
+                            {% endfor %}
                             
                         </select>
                     </div>
                     <div class="input-block" >
                         <label for="time">Hora</label>
-                        <input name="time" id="time" type="time" value="{{filters.time}}">
+                        <input name="time" id="time" type="time" value="{{ filters.time }}">
                     </div>
                     <button type="submit">Filtrar</button>
                 </form>
@@ -73,7 +73,7 @@
 
             {% else %}
 
-                {%for proffy in proffys%}
+                {% for proffy in proffys %}
                     <article class="teacher-item">
                         <header>
                             <img 
@@ -96,7 +96,7 @@
                             </a>
                         </footer>
                     </article>
-                {%endfor%}
+                {% endfor %}
 
             {% endif %}
 
