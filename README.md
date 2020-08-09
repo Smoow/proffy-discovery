@@ -1,4 +1,4 @@
-📋 Índice
+## 📋 Índice
 
 - [Preview](https://github.com/smoow/proffy-discovery#-Preview)
 - [Sobre](https://github.com/smoow/proffy-discovery#-Sobre)
