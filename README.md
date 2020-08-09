@@ -6,7 +6,7 @@
 
 ## 🚀 Tecnologias utilizadas
 
-#### O projeto está desenvolvido utilizando as seguintes tecnologias:
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - HTML
 - CSS
@@ -31,7 +31,7 @@ npm i
 npm run dev
 ```
 
-#### Feito isso, abra o seu navegador e acesse http://localhost:5000/
+Feito isso, abra o seu navegador e acesse http://localhost:5000/
 
 --------------------
 
