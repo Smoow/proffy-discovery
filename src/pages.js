@@ -19,7 +19,7 @@ async function pageStudy(request, response) {
     const query = `
         SELECT classes.*, proffys.* 
         FROM proffys
-        JOIN classes ON (classes.proffy_id = proffy_id)
+        JOIN classes ON (classes.proffy_id = proffy.id)
         WHERE EXISTS (
             SELECT class_schedule.* 
             FROM class_schedule
