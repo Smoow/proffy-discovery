@@ -1,4 +1,4 @@
-// data
+// samples of fake data
 const proffys = [
     { 
         name: "Pedro Henrique Carreto", 

@@ -1,3 +1,5 @@
+// created to test the main database
+
 const Database = require('./db')
 const createProffy = require('./createProffy')
 
@@ -34,7 +36,6 @@ Database.then(async (db) => {
     // Consult datas
 
     const selectedProffys = await db.all("SELECT * FROM proffys")
-    // console.log(selectedProffys)
 
     const selectedClassesAndProffys = await db.all(`
         SELECT classes.*, proffys.* 
@@ -42,7 +43,6 @@ Database.then(async (db) => {
         JOIN classes ON (classes.proffy_id = proffy_id)
         WHERE classes.proffy_id = 1;
     `)
-    // console.log(selectedClassesAndProffys)
 
 
     const selectClassesSchedules = await db.all(`
@@ -53,6 +53,4 @@ Database.then(async (db) => {
         AND class_schedule.time_from <= "720"
         AND class_schedule.time_to > "720"
     `)
-    // console.log(selectClassesSchedules)
-
 })
