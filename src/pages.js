@@ -1,5 +1,4 @@
 const Database = require('./database/db')
-
 const { subjects, weekdays, getSubject, convertHoursToMinutes } = require('./utils/format')
 
 function pageLanding(request, response) {
@@ -45,8 +44,6 @@ async function pageStudy(request, response) {
     } catch (error) {
         console.log(error)
     }
-
-
 }
 
 function pageGiveClasses(request, response) {
@@ -88,8 +85,6 @@ async function saveClasses(request, response) {
     } catch (error) {
         console.log(error)
     }
-
-    
 }
 
 module.exports = {
